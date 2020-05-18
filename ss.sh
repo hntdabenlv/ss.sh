@@ -5,7 +5,7 @@ yum install -y gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-
 
 # Installation of libsodium
 export LIBSODIUM_VER=1.0.16
-wget https://github.com/jedisct1/libsodium/releases/download/1.0.16/libsodium-$LIBSODIUM_VER.tar.gz
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/libsodium-$LIBSODIUM_VER.tar.gz
 tar xvf libsodium-$LIBSODIUM_VER.tar.gz
 pushd libsodium-$LIBSODIUM_VER
 ./configure --prefix=/usr && make
@@ -15,7 +15,7 @@ ldconfig
 
 # Installation of MbedTLS
 export MBEDTLS_VER=2.6.0
-wget https://github.com/ARMmbed/mbedtls/archive/mbedtls-$MBEDTLS_VER.tar.gz
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/mbedtls-mbedtls-$MBEDTLS_VER.tar.gz
 tar xvf mbedtls-$MBEDTLS_VER.tar.gz
 pushd mbedtls-mbedtls-$MBEDTLS_VER
 make SHARED=1 CFLAGS="-O2 -fPIC"
@@ -24,7 +24,8 @@ popd
 ldconfig
 
 # Installation of obfs
-git clone https://github.com/shadowsocks/simple-obfs.git
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/simple-obfs.tar
+tar xvf simple-obfs.tar
 pushd simple-obfs
 git submodule update --init --recursive
 ./autogen.sh
@@ -33,7 +34,8 @@ make install
 popd
 
 # Start building
-git clone https://github.com/shadowsocks/shadowsocks-libev.git
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/shadowsocks-libev.tar
+tar xvf shadowsocks-libev.tar
 pushd shadowsocks-libev
 git submodule update --init --recursive
 ./autogen.sh && ./configure && make
