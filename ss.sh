@@ -15,7 +15,7 @@ ldconfig
 
 # Installation of MbedTLS
 export MBEDTLS_VER=2.6.0
-wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/mbedtls-mbedtls-$MBEDTLS_VER.tar.gz
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/mbedtls-$MBEDTLS_VER.tar.gz
 tar xvf mbedtls-$MBEDTLS_VER.tar.gz
 pushd mbedtls-mbedtls-$MBEDTLS_VER
 make SHARED=1 CFLAGS="-O2 -fPIC"
