@@ -27,9 +27,7 @@ ldconfig
 wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/simple-obfs.tar
 tar xvf simple-obfs.tar
 pushd simple-obfs
-git submodule update --init --recursive
-./autogen.sh
-./configure && make
+./autogen.sh && ./configure && make
 make install
 popd
 
@@ -37,7 +35,6 @@ popd
 wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/shadowsocks-libev.tar
 tar xvf shadowsocks-libev.tar
 pushd shadowsocks-libev
-git submodule update --init --recursive
 ./autogen.sh && ./configure && make
 make install
 popd
