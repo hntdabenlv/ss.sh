@@ -24,16 +24,16 @@ popd
 ldconfig
 
 # Installation of obfs
-wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/simple-obfs.tar
-tar xvf simple-obfs.tar
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/simple-obfs.tar.gz
+tar xvf simple-obfs.tar.gz
 pushd simple-obfs
 ./autogen.sh && ./configure && make
 make install
 popd
 
 # Start building
-wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/shadowsocks-libev.tar
-tar xvf shadowsocks-libev.tar
+wget https://github.com/hntdabenlv/ss.sh/releases/download/1.0.0/shadowsocks-libev.tar.gz
+tar xvf shadowsocks-libev.tar.gz
 pushd shadowsocks-libev
 ./autogen.sh && ./configure && make
 make install
