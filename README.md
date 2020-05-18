@@ -1,3 +1,3 @@
-Centos 7
-#chmod +x ss.sh
-#./ss.sh
+Centos 7<br>
+# chmod +x ss.sh<br>
+# ./ss.sh<br>
